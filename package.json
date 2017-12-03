@@ -1,0 +1,40 @@
+{
+    "name": "sesheta-github-trello",
+    "version": "0.1.0",
+    "description": "This is a github-to-trello thingy",
+    "engines": {
+        "node": ">=4.0.0"
+    },
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "lint": "eslint test/ index.js",
+        "test": "nyc npm run -s test:_mocha",
+        "test:_mocha": "_mocha test/*.js --reporter progress",
+        "codecov": "nyc report -r lcovonly && codecov",
+        "clean": "rimraf .nyc_output coverage"
+    },
+    "keywords": [
+        "trello",
+        "github",
+        "bot",
+        "sesheta"
+    ],
+    "author": "Christoph Görn <goern@b4mad.net> (http://b4mad.net)",
+    "license": "GPL-3.0",
+    "dependencies": {
+        "github-webhook-handler": "^0.7.0",
+        "node-trello": "^1.3.0"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "codecov": "^3.0.0",
+        "eslint": "^4.12.1",
+        "eslint-plugin-mocha": "^4.11.0",
+        "eslint-plugin-node": "^5.2.1",
+        "mocha": "^4.0.1",
+        "nyc": "^11.3.0",
+        "rimraf": "^2.6.2",
+        "should": "^13.1.3"
+    }
+}
