@@ -30,4 +30,11 @@ handler.on("push", function(event) {
     );
 });
 
-handler.on("issues", github.handle_issue(event));
+handler.on("issues", function(event) {
+    console.log(
+        "Received a push event for %s to %s",
+        event.payload.repository.name,
+        event.payload.ref
+    );
+    github.handle_issue(event.payload);
+});
