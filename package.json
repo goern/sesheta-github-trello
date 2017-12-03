@@ -14,14 +14,13 @@
         "codecov": "nyc report -r lcovonly && codecov",
         "clean": "rimraf .nyc_output coverage"
     },
-    "keywords": [
-        "trello",
-        "github",
-        "bot",
-        "sesheta"
-    ],
-    "author": "Christoph Görn <goern@b4mad.net> (http://b4mad.net)",
+    "keywords": ["trello", "github", "bot", "sesheta"],
+    "author": "Christoph Görn <goern@redhat.com>",
     "license": "GPL-3.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/goern/sesheta-github-trello.git"
+    },
     "dependencies": {
         "github-webhook-handler": "^0.7.0",
         "node-trello": "^1.3.0"
